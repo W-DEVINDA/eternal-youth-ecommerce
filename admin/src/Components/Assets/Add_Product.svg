@@ -1,0 +1,14 @@
+<svg width="33" height="31" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Product box -->
+  <rect x="6" y="7" width="21" height="17" rx="3" fill="#FF583E"/>
+
+  <!-- Box top -->
+  <path d="M6 10L16.5 4L27 10" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Plus circle -->
+  <circle cx="24" cy="22" r="5" fill="black"/>
+
+  <!-- Plus sign -->
+  <path d="M24 19.8V24.2" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M21.8 22H26.2" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

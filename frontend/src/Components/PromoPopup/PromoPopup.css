@@ -1,0 +1,261 @@
+.promo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.promo-popup {
+  background: #fce4e4;
+  width: 560px;
+  max-width: 95vw;
+  border-radius: 4px;
+  padding: 40px 36px 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.promo-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  padding: 4px 8px;
+}
+
+.promo-close:hover { color: #ff4141; }
+
+.promo-top-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.promo-offers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.promo-offer-left,
+.promo-offer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.promo-get {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #cc0000;
+  margin: 0;
+}
+
+.promo-amount {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #cc0000;
+  margin: 0;
+  line-height: 1;
+}
+
+.promo-free {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #cc0000;
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.promo-condition {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #cc0000;
+  margin: 0;
+  text-align: center;
+}
+
+.promo-divider {
+  width: 1px;
+  height: 80px;
+  background: #cc0000;
+  opacity: 0.4;
+}
+
+.promo-input-row {
+  display: flex;
+  gap: 0;
+}
+
+.promo-input-row input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  outline: none;
+  background: white;
+  font-family: inherit;
+}
+
+.promo-input-row button {
+  padding: 14px 22px;
+  background: #111;
+  color: white;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  transition: background 0.2s;
+}
+
+.promo-input-row button:hover { background: #333; }
+
+.promo-terms {
+  font-size: 0.75rem;
+  color: #555;
+  margin: 0;
+  text-align: center;
+}
+
+.promo-terms span {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #333;
+}
+
+.promo-checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.78rem;
+  color: #555;
+}
+
+.promo-checkbox-row input {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Success state */
+.promo-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.promo-success-icon {
+  width: 60px;
+  height: 60px;
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.promo-success h2 {
+  font-size: 1.4rem;
+  color: #222;
+  margin: 0;
+}
+
+.promo-success p {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.promo-success button {
+  padding: 12px 32px;
+  background: #ff4141;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+}
+
+.promo-success button:hover { background: #e03030; }
+.promo-code-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 2px dashed #ff4141;
+  border-radius: 8px;
+  padding: 10px 16px;
+  width: 100%;
+  justify-content: center;
+}
+
+.promo-code-box span {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ff4141;
+  letter-spacing: 2px;
+}
+
+.promo-code-box button {
+  padding: 4px 12px;
+  background: #ff4141;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+}
+@media (max-width: 600px) {
+  .promo-popup { padding: 32px 20px 24px; }
+  .promo-amount { font-size: 1.4rem; }
+  .promo-offers { gap: 16px; }
+  .promo-input-row { flex-direction: column; }
+  .promo-input-row button { width: 100%; }
+}

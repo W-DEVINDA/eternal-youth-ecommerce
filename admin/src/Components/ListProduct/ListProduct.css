@@ -1,0 +1,220 @@
+.listproduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 740px;
+  padding: 10px 50px;
+  margin: 30px;
+  border-radius: 6px;
+  background: #fff;
+}
+.listproduct-format-main{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  padding: 20px 0px;
+  color: #454545;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.listproduct-format{
+  width: 100%;
+  align-items: center;
+  font-weight: 500;
+}
+.listproduct-product-icon{
+    height: 80px;
+}
+.listproduct-remove-icon{
+  cursor: pointer;
+  margin: auto;
+}
+.listproduct-allproducts{
+  width: 100%;
+  overflow-y: auto;
+}
+.listproduct-allproducts::-webkit-scrollbar{
+    display: none;
+}
+.listproduct-edit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+}
+
+.listproduct-edit-btn:hover {
+  opacity: 0.7;
+}
+
+.listproduct-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.listproduct-modal {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listproduct-modal h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.listproduct-modal label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.listproduct-modal input,
+.listproduct-modal select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.listproduct-modal-row {
+  display: flex;
+  gap: 16px;
+}
+
+.listproduct-modal-row > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.listproduct-modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.listproduct-save-btn {
+  flex: 1;
+  padding: 10px;
+  background: #ff4141;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.listproduct-save-btn:hover { background: #e03030; }
+
+.listproduct-cancel-btn {
+  flex: 1;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.listproduct-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.listproduct-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.listproduct-modal {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.listproduct-modal p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.listproduct-modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.listproduct-modal-confirm {
+  padding: 10px 24px;
+  background: #ff4141;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.listproduct-modal-confirm:hover { background: #e03030; }
+
+.listproduct-modal-cancel {
+  padding: 10px 24px;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.listproduct-modal-cancel:hover { background: #ebebeb; }
+.listproduct-cancel-btn:hover { background: #ebebeb; }
+@media(max-width:800px){
+  .listproduct {
+    box-sizing: border-box;
+    width: 95%;
+    height: 100%;
+    padding: 10px 30px;
+    margin: 20px auto;
+  }
+  .listproduct-format-main{
+    padding: 15px 0px;
+    color: #454545;
+    font-size: 12px;
+  }
+  .listproduct-product-icon{
+    height: 60px;
+}
+}

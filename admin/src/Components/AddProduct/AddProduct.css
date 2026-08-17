@@ -1,0 +1,244 @@
+.addproduct {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  padding: 30px 50px;
+  margin: 20px 30px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.addproduct-itemfield {
+  width: 100%;
+  color: #7b7b7b;
+  font-size: 16px;
+}
+
+.addproduct-itemfield input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  padding-left: 15px;
+  border: 1px solid #c3c3c3;
+  outline: none;
+  color: #7b7b7b;
+  font-family: Poppins;
+  font-size: 14px;
+}
+
+.addproduct-price {
+  display: flex;
+  gap: 40px;
+}
+
+.add-product-selector {
+  padding: 10px 10px;
+  width: 100px;
+  height: 50px;
+  font-size: 14px;
+  color: #7b7b7b;
+  border: 1px solid #7b7b7b8d;
+  border-radius: 4px;
+}
+
+.addproduct-itemfield div {
+  display: flex;
+  width: 25%;
+}
+
+.addproduct-thumbnail-img {
+  height: 120px;
+  width: 120px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.addproduct-itemfield div img {
+  margin-left: -30px;
+}
+
+.addproduct-btn {
+  margin-top: 40px;
+  width: 160px;
+  height: 50px;
+  border-radius: 6px;
+  background: #6079ff;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+}
+.addproduct-img-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.addproduct-img-slot {
+  position: relative;
+  width: 100px !important;
+  height: 100px !important;
+  flex-shrink: 0;
+}
+
+.addproduct-img-slot img.addproduct-thumbnail-img {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 0 !important;
+}
+
+.addproduct-img-delete-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4141;
+  color: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 1;
+}
+.addproduct-tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.addproduct-tag {
+  padding: 6px 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  background: #f5f5f5;
+  transition: all 0.2s;
+}
+
+.addproduct-tag.selected {
+  background: #ff4141;
+  color: white;
+  border-color: #ff4141;
+}
+
+.addproduct-custom-tag {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.addproduct-custom-tag input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.addproduct-custom-tag button {
+  padding: 8px 16px;
+  background: #ff4141;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.add-product-selector {
+  width: 100%;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+.addproduct-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.addproduct-modal {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.addproduct-modal p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.addproduct-modal-success-icon {
+  width: 52px;
+  height: 52px;
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.addproduct-modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.addproduct-modal-confirm {
+  padding: 10px 24px;
+  background: #ff4141;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.addproduct-modal-confirm:hover { background: #e03030; }
+
+.addproduct-modal-cancel {
+  padding: 10px 24px;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.addproduct-modal-cancel:hover { background: #ebebeb; }
+@media(max-width:800px) {
+  .addproduct {
+    width: auto;
+    padding: 30px;
+    margin: 20px 20px;
+  }
+}

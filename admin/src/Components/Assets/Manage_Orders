@@ -1,0 +1,16 @@
+<svg width="33" height="31" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clipboard background -->
+  <rect x="6" y="3" width="21" height="25" rx="3" fill="#FF583E"></rect>
+
+  <!-- Clipboard clip -->
+  <rect x="11" y="1" width="11" height="5" rx="2" fill="black"></rect>
+
+  <!-- Order lines -->
+  <rect x="10" y="9" width="13" height="2" rx="1" fill="white"></rect>
+  <rect x="10" y="14" width="10" height="2" rx="1" fill="white"></rect>
+  <rect x="10" y="19" width="8" height="2" rx="1" fill="white"></rect>
+
+  <!-- Checkmark -->
+  <circle cx="24" cy="22" r="5" fill="black"></circle>
+  <path d="M21.8 22L23.3 23.5L26.2 20.6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

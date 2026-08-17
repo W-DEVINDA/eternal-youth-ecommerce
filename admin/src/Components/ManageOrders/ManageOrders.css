@@ -1,0 +1,185 @@
+.manageorders {
+  padding: 24px 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.manageorders h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.manageorders-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.manageorders-filter-btn {
+  padding: 7px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: #f5f5f5;
+  color: #555;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.manageorders-filter-btn.active {
+  background: #ff4141;
+  color: white;
+  border-color: #ff4141;
+}
+
+.manageorders-count {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.manageorders-empty {
+  color: #aaa;
+  font-style: italic;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.manageorders-card {
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: white;
+}
+
+.manageorders-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.manageorders-order-id {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #222;
+  margin: 0;
+}
+
+.manageorders-date {
+  font-size: 0.82rem;
+  color: #aaa;
+  margin: 3px 0 0;
+}
+
+.manageorders-status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.manageorders-customer {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.manageorders-customer p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.manageorders-customer p span {
+  font-weight: 600;
+  color: #333;
+}
+
+.manageorders-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.manageorders-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  color: #444;
+}
+
+.manageorders-item p { margin: 0; }
+
+.manageorders-item-name {
+  font-weight: 600;
+  color: #222 !important;
+}
+
+.manageorders-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #ebebeb;
+}
+
+.manageorders-total {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0;
+}
+
+.manageorders-status-update {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.manageorders-status-update select {
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.manageorders-updating {
+  font-size: 0.82rem;
+  color: #888;
+}
+
+.manageorders-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #22c55e;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  animation: fadeInUp 0.3s ease;
+  z-index: 1000;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

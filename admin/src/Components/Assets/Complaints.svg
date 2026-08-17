@@ -1,0 +1,14 @@
+<svg width="33" height="31" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Chat bubble -->
+  <rect x="5" y="5" width="23" height="18" rx="4" fill="#FF583E"></rect>
+  <path d="M12 23L10 28L16 23" fill="#FF583E"></path>
+
+  <!-- Exclamation icon -->
+  <circle cx="23" cy="20" r="5" fill="black"></circle>
+  <rect x="22.2" y="17" width="1.6" height="4.5" rx="0.8" fill="white"></rect>
+  <circle cx="23" cy="23" r="1" fill="white"></circle>
+
+  <!-- Message lines -->
+  <rect x="9" y="10" width="11" height="2" rx="1" fill="white"></rect>
+  <rect x="9" y="14" width="8" height="2" rx="1" fill="white"></rect>
+</svg>
