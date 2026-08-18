@@ -22,7 +22,7 @@ import LoginSignup from "./Pages/LoginSignup";
 import Checkout from "./Pages/Checkout/Checkout";
 import Profile from "./Pages/Profile/Profile";
 
-export const backend_url = 'http://localhost:4000';
+export const backend_url = 'https://eternal-youth-ecommerce-1.onrender.com';
 export const currency = 'LKR ';
 
 function App() {
