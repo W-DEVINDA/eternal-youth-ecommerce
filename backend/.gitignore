@@ -25,6 +25,5 @@ yarn-error.log*
 # Environment variables
 .env
 
-# Uploaded product images
-upload/images
+
 
