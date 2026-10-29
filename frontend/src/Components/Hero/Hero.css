@@ -185,19 +185,23 @@
         padding: 36px 8% 0;
         gap: 6px;
     }
+    .hero{ position: relative; }
     .hero-right{
         display: block;
-        left: 0;
-        text-align: center;
+        position: absolute;
+        left: auto;
+        right: 7%;
+        bottom: 14px;
         line-height: 0;
     }
     .hero-right img{
-        width: min(72vw, 330px);
-        max-width: 100%;
+        width: auto;
+        height: clamp(84px, 24vw, 104px);
+        max-width: none;
     }
     .hero-left h2{ margin-bottom: 12px; }
     .hero-latest-btn{ margin-top: 22px; }
-    .hero{ padding-bottom: 24px; }
+       .hero{ padding-bottom: 50px; }
 }
 @media(max-width:340px){
     .hero-left p{ font-size: 33px; }
