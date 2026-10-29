@@ -347,3 +347,12 @@
 }
 
 .profile-star.filled { color: #f5a623; }
+
+/* small screens */
+.profile-modal { max-width: calc(100vw - 32px); box-sizing: border-box; }
+@media (max-width: 520px) {
+  .profile { padding: 0 14px 40px; }
+  .profile-tabs { overflow-x: auto; }
+  .profile-tab { padding: 10px 14px; white-space: nowrap; }
+  .profile-modal { padding: 24px 18px; }
+}

@@ -69,7 +69,34 @@
     .offers-right{
         display: none;
     }
-    .offers{
+      .offers{
         padding: 50px 8%;
+    }
+}
+
+/* ===== phones/tablets: tighter, evenly scaled Exclusive Offers section ===== */
+@media(max-width:800px){
+    .offers{
+        margin: 40px auto 50px;
+        padding: 28px 7%;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+    .offers-right{
+        display: block;
+        flex-shrink: 0;
+    }
+    .offers-right img{
+        width: min(36vw, 220px);
+        padding-top: 0;
+        display: block;
+    }
+    .offers-left h1{ font-size: clamp(24px, 6.4vw, 40px); line-height: 1.25; }
+    .offers-left p{ font-size: clamp(11px, 2.9vw, 14px); line-height: 1.5; }
+    .offers-left button{
+        width: clamp(130px, 38vw, 180px);
+        height: 44px;
+        font-size: 15px;
+        margin-top: 18px;
     }
 }

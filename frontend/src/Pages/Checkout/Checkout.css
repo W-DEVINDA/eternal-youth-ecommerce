@@ -322,3 +322,12 @@
   color: #888;
   margin: 0;
 }
+
+/* small screens */
+.checkout-modal { max-width: calc(100vw - 32px); box-sizing: border-box; }
+@media (max-width: 520px) {
+  .checkout { margin: 24px auto; padding: 0 14px 40px; }
+  .checkout-section { padding: 16px; }
+  .checkout-row { flex-direction: column; gap: 0; }
+  .checkout-modal { padding: 24px 18px; }
+}

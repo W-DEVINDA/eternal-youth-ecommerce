@@ -22,6 +22,14 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: 60px auto;
-    gap: 30px;
+      gap: 30px;
     max-width: 1280px;
+}
+
+/* ===== phones/tablets: smaller title and tighter spacing ===== */
+@media(max-width:800px){
+    .new-collections{ margin-bottom: 40px; }
+    .new-collections h1{ font-size: 30px; }
+    .new-collections hr{ width: 80px; }
+    .collections{ margin: 28px auto; gap: 20px; }
 }

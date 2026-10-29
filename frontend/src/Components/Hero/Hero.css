@@ -172,5 +172,33 @@
     .hero-left p{ font-size: 130px; }
     .hero-hand-icon img{ width: 115px; }
     .hero-latest-btn{ width: 320px; height: 70px; font-size: 22px; }
-    .hero-right img{ width: 720px; }
+     .hero-right img{ width: 720px; }
+}
+
+/* ===== phones: text on top, model picture underneath, no big empty space ===== */
+@media(max-width:700px){
+    .hero{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        min-height: 0;
+        padding: 36px 8% 0;
+        gap: 6px;
+    }
+    .hero-right{
+        display: block;
+        left: 0;
+        text-align: center;
+        line-height: 0;
+    }
+    .hero-right img{
+        width: min(72vw, 330px);
+        max-width: 100%;
+    }
+    .hero-left h2{ margin-bottom: 12px; }
+    .hero-latest-btn{ margin-top: 22px; }
+    .hero{ padding-bottom: 24px; }
+}
+@media(max-width:340px){
+    .hero-left p{ font-size: 33px; }
 }

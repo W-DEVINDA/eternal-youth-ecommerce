@@ -67,3 +67,13 @@
         font-size: 14px;
     }
 }
+
+@media(max-width:800px){
+    .footer{ padding-top: 0; gap: 18px; }
+    .footer-copyright{ margin-bottom: 20px; gap: 14px; }
+}
+
+@media(max-width:800px){
+    .footer{ padding-top: 0; gap: 18px; }
+    .footer-copyright{ margin-bottom: 20px; gap: 14px; }
+}

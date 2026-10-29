@@ -110,3 +110,8 @@
 .newsletter input{
     min-width: 0;
 }
+
+/* ===== phones/tablets: less empty space around the newsletter ===== */
+@media(max-width:800px){
+    .newsletter{ margin-bottom: 40px; padding-top: 36px; padding-bottom: 36px; }
+}

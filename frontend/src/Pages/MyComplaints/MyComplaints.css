@@ -371,3 +371,7 @@
   font-size: 0.82rem;
   color: #555;
 }
+
+/* small screens */
+.myc-chat-window { max-width: calc(100vw - 24px); box-sizing: border-box; }
+.myc-modal { max-width: calc(100vw - 32px); box-sizing: border-box; }
