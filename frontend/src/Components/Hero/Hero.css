@@ -206,3 +206,9 @@
 @media(max-width:340px){
     .hero-left p{ font-size: 33px; }
 }
+
+/* phones: no model picture, just the text and the button */
+@media(max-width:700px){
+    .hero-right{ display: none; }
+    .hero{ padding-bottom: 36px; }
+}
