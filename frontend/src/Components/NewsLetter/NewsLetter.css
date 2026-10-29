@@ -105,3 +105,8 @@
         font-size: 12px;
     }
 }
+
+/* stop the email box overflowing on small screens */
+.newsletter input{
+    min-width: 0;
+}

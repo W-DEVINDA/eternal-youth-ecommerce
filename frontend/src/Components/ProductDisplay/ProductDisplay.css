@@ -194,7 +194,22 @@
     .productdisplay-img-list img{
         height:68px;
     }
-    .productdisplay-main-img{
+     .productdisplay-main-img{
         height: 300px;
+    }
+}
+
+/* small screens: size buttons wrap instead of overflowing */
+.productdisplay-right { min-width: 0; }
+@media(max-width:500px){
+    .productdisplay-right-sizes{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .productdisplay-right-sizes div{
+        padding: 12px 16px;
+    }
+    .productdisplay-right button{
+        width: 100%;
     }
 }

@@ -140,3 +140,37 @@
         margin-top: 30px;
     }
 }
+
+/* ===== responsive fixes ===== */
+@media(max-width:1200px){
+    .hero-right{ left: 0; }
+}
+@media(max-width:700px){
+    .hero-left p{ font-size: 46px; }
+    .hero-hand-icon{ gap: 12px; }
+    .hero-hand-icon img{ width: 44px; }
+}
+@media(max-width:400px){
+    .hero{ padding: 0 7%; }
+    .hero-left p{ font-size: 38px; }
+    .hero-hand-icon img{ width: 36px; }
+    .hero-latest-btn{ width: 200px; }
+}
+
+/* large monitors (above laptop size) */
+@media(min-width:1700px){
+    .hero{ min-height: 82vh; padding: 10px 10% 10px 6%; }
+    .hero-left h2{ font-size: 22px; }
+    .hero-left p{ font-size: 100px; }
+    .hero-hand-icon img{ width: 90px; }
+    .hero-latest-btn{ width: 260px; height: 58px; font-size: 18px; }
+    .hero-right img{ width: 560px; }
+}
+@media(min-width:2200px){
+    .hero{ min-height: 78vh; padding: 10px 14% 10px 8%; }
+    .hero-left h2{ font-size: 28px; }
+    .hero-left p{ font-size: 130px; }
+    .hero-hand-icon img{ width: 115px; }
+    .hero-latest-btn{ width: 320px; height: 70px; font-size: 22px; }
+    .hero-right img{ width: 720px; }
+}

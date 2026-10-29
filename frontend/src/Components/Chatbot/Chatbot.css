@@ -287,3 +287,13 @@
 .chatbot-messages::-webkit-scrollbar { width: 4px; }
 .chatbot-messages::-webkit-scrollbar-track { background: transparent; }
 .chatbot-messages::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
+
+/* small screens: chat window never wider than the screen */
+@media (max-width: 480px) {
+  .chatbot-wrapper { right: 14px; bottom: 14px; }
+  .chatbot-window {
+    width: calc(100vw - 28px);
+    height: calc(100dvh - 110px);
+    max-height: 520px;
+  }
+}

@@ -47,6 +47,93 @@ html {
   }
   to {
     opacity: 0;
-    transform: translateY(-16px);
+        transform: translateY(-16px);
   }
+}
+
+/* never allow sideways scrolling */
+body {
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+}
+
+/* ===== large monitors: let the layout use the extra space ===== */
+@media (min-width: 1700px) {
+  body .nav { padding: 18px 5%; }
+  body .nav-logo p { font-size: 32px; }
+  body .nav-logo img { width: 52px; }
+  body .nav-menu { font-size: 18px; gap: 50px; }
+  body .nav-login-cart button { width: 135px; height: 46px; font-size: 18px; }
+
+  body .popular,
+  body .collections,
+  body .relatedproducts-item { max-width: 1600px; }
+  body .shopcategory-products { max-width: 1700px; }
+  body .shopcategory-indexSort { width: 90%; max-width: 1700px; margin: 0 auto; }
+  body .popular h1,
+  body .new-collections h1,
+  body .relatedproducts h1 { font-size: 48px; }
+  body .item { width: 22%; }
+  body .item p { font-size: 18px; }
+  body .item-price-new,
+  body .item-price-old { font-size: 20px; }
+
+  body .offers { padding: 0 12%; }
+  body .offers-left h1 { font-size: 72px; }
+  body .offers-left p { font-size: 18px; }
+  body .offers-right img { width: 400px; }
+  body .newsletter { max-width: 1400px; }
+
+  body .productdisplay,
+  body .breadcrums,
+  body .cartitems,
+  body .descriptionbox { max-width: 1600px; margin-left: auto; margin-right: auto; }
+  body .productdisplay { padding: 0 6%; box-sizing: border-box; }
+  body .breadcrums { padding: 0 6%; box-sizing: border-box; }
+  body .productdisplay-main-img { height: 620px; }
+  body .productdisplay-img-list img { height: 130px; max-width: 150px; }
+  body .productdisplay-right h1 { font-size: 38px; }
+  body .productdisplay-right-prices { font-size: 26px; }
+}
+
+@media (min-width: 2200px) {
+  body .nav { padding: 22px 6%; }
+  body .nav-logo p { font-size: 38px; }
+  body .nav-logo img { width: 62px; }
+  body .nav-menu { font-size: 22px; gap: 64px; }
+  body .nav-login-cart button { width: 160px; height: 54px; font-size: 22px; }
+
+  body .popular,
+  body .collections,
+  body .relatedproducts-item { max-width: 2000px; }
+  body .shopcategory-products,
+  body .shopcategory-indexSort { max-width: 2100px; }
+  body .popular h1,
+  body .new-collections h1,
+  body .relatedproducts h1 { font-size: 58px; }
+  body .item p { font-size: 22px; }
+  body .item-price-new,
+  body .item-price-old { font-size: 24px; }
+
+  body .offers { padding: 0 16%; }
+  body .offers-left h1 { font-size: 88px; }
+  body .offers-left p { font-size: 22px; }
+  body .offers-left button { width: 260px; height: 64px; font-size: 22px; }
+  body .offers-right img { width: 520px; }
+  body .newsletter { max-width: 1700px; }
+  body .newsletter h1 { font-size: 56px; }
+  body .newsletter p { font-size: 22px; }
+
+  body .productdisplay,
+  body .breadcrums,
+  body .cartitems,
+  body .descriptionbox { max-width: 2000px; }
+  body .productdisplay-main-img { height: 780px; }
+  body .productdisplay-img-list img { height: 160px; max-width: 190px; }
+  body .productdisplay-right h1 { font-size: 46px; }
+  body .productdisplay-right-prices { font-size: 32px; }
+  body .footer-logo p { font-size: 38px; }
+  body .footer-links { font-size: 20px; }
 }

@@ -250,7 +250,32 @@
         display: grid;
     }
     .cartitems-format-main{
-        grid-template-columns: 0.5fr 3fr 0.5fr;
+          grid-template-columns: 0.5fr 3fr 0.5fr;
         gap: 10px;
+    }
+}
+
+/* small screens: promo box and totals stay inside the screen */
+@media(max-width:700px){
+    .cartitems-down{
+        flex-direction: column;
+    }
+    .cartitems-total,
+    .cartitems-promocode{
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+    .cartitems-promobox{
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .cartitems-promobox input{
+        min-width: 0;
+    }
+    .cartitems-promobox button{
+        width: 100px;
+        flex-shrink: 0;
     }
 }
