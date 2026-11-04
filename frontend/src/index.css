@@ -60,7 +60,7 @@ img {
 }
 
 /* ===== large monitors: let the layout use the extra space ===== */
-@media (min-width: 1700px) {
+@media (min-width: 99999px) {
   body .nav { padding: 18px 5%; }
   body .nav-logo p { font-size: 32px; }
   body .nav-logo img { width: 52px; }
@@ -98,7 +98,7 @@ img {
   body .productdisplay-right-prices { font-size: 26px; }
 }
 
-@media (min-width: 2200px) {
+@media (min-width: 99999px) {
   body .nav { padding: 22px 6%; }
   body .nav-logo p { font-size: 38px; }
   body .nav-logo img { width: 62px; }
@@ -135,5 +135,32 @@ img {
   body .productdisplay-right h1 { font-size: 46px; }
   body .productdisplay-right-prices { font-size: 32px; }
   body .footer-logo p { font-size: 38px; }
-  body .footer-links { font-size: 20px; }
+   body .footer-links { font-size: 20px; }
+}
+
+/* ===== screens wider than the 1536px laptop (page is scaled up by index.js) ===== */
+@media (min-width: 1537px) {
+  /* hero: same shape as on the laptop */
+  body .hero { min-height: 657px; }
+  body .loginsignup { min-height: 657px; }
+
+  /* everything lines up with the logo (left) and the Login button (right) */
+  body .popular,
+  body .new-collections,
+  body .relatedproducts { padding-left: 70px; padding-right: 70px; box-sizing: border-box; max-width: none; width: 100%; margin-left: 0; margin-right: 0; }
+  body .popular-item,
+  body .collections,
+  body .relatedproducts-item,
+  body .shopcategory-products { width: 100%; max-width: none; margin-left: 0; margin-right: 0; gap: 25px; }
+  body .popular-item .item,
+  body .collections .item,
+  body .relatedproducts-item .item,
+  body .shopcategory-products .item { width: calc((100% - 75px) / 4); }
+  body .shopcategory-products { box-sizing: border-box; padding: 0 70px; }
+  body .shopcategory-indexSort { margin: 0 70px; width: auto; max-width: none; }
+  body .offers { padding-left: 70px; padding-right: 70px; }
+  body .productdisplay { padding: 0 70px; max-width: none; }
+  body .breadcrums { margin: 20px 70px; }
+  body .descriptionbox { margin: 120px 70px; }
+  body .cartitems { margin: 100px 70px; }
 }

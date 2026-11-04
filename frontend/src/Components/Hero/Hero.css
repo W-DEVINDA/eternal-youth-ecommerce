@@ -1,5 +1,5 @@
 .hero{
-    min-height: 90vh;
+    min-height: min(90vh, 657px);
     background:  linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
     display: flex;
     align-items: center;
@@ -158,7 +158,7 @@
 }
 
 /* large monitors (above laptop size) */
-@media(min-width:1700px){
+@media(min-width:99999px){
     .hero{ min-height: 82vh; padding: 10px 10% 10px 6%; }
     .hero-left h2{ font-size: 22px; }
     .hero-left p{ font-size: 100px; }
@@ -166,7 +166,7 @@
     .hero-latest-btn{ width: 260px; height: 58px; font-size: 18px; }
     .hero-right img{ width: 560px; }
 }
-@media(min-width:2200px){
+@media(min-width:99999px){
     .hero{ min-height: 78vh; padding: 10px 14% 10px 8%; }
     .hero-left h2{ font-size: 28px; }
     .hero-left p{ font-size: 130px; }
