@@ -115,3 +115,18 @@
 @media(max-width:800px){
     .newsletter{ margin-bottom: 40px; padding-top: 36px; padding-bottom: 36px; }
 }
+
+/* ===== pink newsletter box: same left/right edges as the logo and Login button on every screen ===== */
+.newsletter{
+    width: calc(100% - 140px);
+    max-width: none;
+}
+@media(max-width:900px){
+    .newsletter{ width: calc(100% - 80px); }
+}
+@media(max-width:750px){
+    .newsletter{ width: calc(100% - 32px); }
+}
+@media(max-width:400px){
+    .newsletter{ width: calc(100% - 24px); }
+}
