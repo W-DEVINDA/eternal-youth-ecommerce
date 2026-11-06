@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import { backend_url } from "../App";
+import { fetchWithRetry } from "../fetchWithRetry";
 
 export const ShopContext = createContext(null);
 
@@ -14,9 +15,10 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
   useEffect(() => {
-    fetch(`${backend_url}/allproducts`)
+       fetchWithRetry(`${backend_url}/allproducts`)
       .then((res) => res.json())
-      .then((data) => setProducts(data))
+            .then((data) => { if (Array.isArray(data)) setProducts(data); })
+      .catch(() => {});
 
     if (localStorage.getItem("auth-token")) {
       fetch(`${backend_url}/getcart`, {

@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react'
 import './RelatedProducts.css'
 import Item from '../Item/Item'
 import { backend_url } from '../../App';
+import { fetchWithRetry } from '../../fetchWithRetry';
 
 const RelatedProducts = ({category,id}) => {
 
   const [related,setRelated] = useState([]);
 
   useEffect(()=>{
-    fetch(`${backend_url}/relatedproducts`,{
+        fetchWithRetry(`${backend_url}/relatedproducts`,{
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -16,7 +17,7 @@ const RelatedProducts = ({category,id}) => {
       },
       body: JSON.stringify({category:category}),
       })
-    .then((res)=>res.json()).then((data)=>setRelated(data))
+    .then((res)=>res.json()).then((data)=>{ if (Array.isArray(data)) setRelated(data); }).catch(()=>{})
   },[])
 
   return (

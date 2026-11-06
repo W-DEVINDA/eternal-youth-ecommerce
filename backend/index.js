@@ -23,7 +23,13 @@ const io = new Server(server, {
 });
 
 // Database Connection With MongoDB
-mongoose.connect(process.env.MONGO_URI);
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.log("MongoDB connection error:", err.message));
+
+// one failed request must never crash the whole server
+process.on("unhandledRejection", (err) => console.log("Unhandled rejection:", err));
 
 // paste your mongoDB Connection string above with password
 // password should not contain '@' special character
@@ -845,36 +851,54 @@ app.post('/signup', async (req, res) => {
 
 // endpoint for getting all products data
 app.get("/allproducts", async (req, res) => {
-  let products = await Product.find({});
-  console.log("All Products");
-  res.send(products);
+  try {
+    let products = await Product.find({});
+    console.log("All Products");
+    res.send(products);
+  } catch (err) {
+    console.log("allproducts error:", err.message);
+    res.status(503).json({ error: "Database not ready, please retry" });
+  }
 });
-
 
 // endpoint for getting latest products data
 app.get("/newcollections", async (req, res) => {
-  let products = await Product.find({});
-  let arr = products.slice(0).slice(-8);
-  console.log("New Collections");
-  res.send(arr);
+  try {
+    let products = await Product.find({});
+    let arr = products.slice(0).slice(-8);
+    console.log("New Collections");
+    res.send(arr);
+  } catch (err) {
+    console.log("newcollections error:", err.message);
+    res.status(503).json({ error: "Database not ready, please retry" });
+  }
 });
-
 
 // endpoint for getting womens products data
 app.get("/popularinwomen", async (req, res) => {
-  let products = await Product.find({ category: "women" });
-  let arr = products.splice(0, 4);
-  console.log("Popular In Women");
-  res.send(arr);
+  try {
+    let products = await Product.find({ category: "women" });
+    let arr = products.splice(0, 4);
+    console.log("Popular In Women");
+    res.send(arr);
+  } catch (err) {
+    console.log("popularinwomen error:", err.message);
+    res.status(503).json({ error: "Database not ready, please retry" });
+  }
 });
 
 // endpoint for getting womens products data
 app.post("/relatedproducts", async (req, res) => {
-  console.log("Related Products");
-  const {category} = req.body;
-  const products = await Product.find({ category });
-  const arr = products.slice(0, 4);
-  res.send(arr);
+  try {
+    console.log("Related Products");
+    const {category} = req.body;
+    const products = await Product.find({ category });
+    const arr = products.slice(0, 4);
+    res.send(arr);
+  } catch (err) {
+    console.log("relatedproducts error:", err.message);
+    res.status(503).json({ error: "Database not ready, please retry" });
+  }
 });
 
 

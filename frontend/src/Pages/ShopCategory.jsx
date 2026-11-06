@@ -4,9 +4,11 @@ import dropdown_icon from '../Components/Assets/dropdown_icon.png'
 import Item from "../Components/Item/Item";
 import { Link } from "react-router-dom";
 import { backend_url } from "../App";
+import { fetchWithRetry } from "../fetchWithRetry";
 
 const ShopCategory = (props) => {
-  const [allproducts, setAllProducts] = useState([]);
+    const [allproducts, setAllProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [selectedType, setSelectedType] = useState("All");
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [bannerIndex, setBannerIndex] = useState(0);
@@ -27,9 +29,11 @@ useEffect(() => {
   }, [banners.length]);
 
   useEffect(() => {
-    fetch(`${backend_url}/allproducts`)
+       fetchWithRetry(`${backend_url}/allproducts`)
       .then(res => res.json())
-      .then(data => setAllProducts(data));
+            .then(data => { if (Array.isArray(data)) setAllProducts(data); })
+      .catch(() => {})
+      .finally(() => setLoading(false));
   }, []);
 
   // Close dropdown when clicking outside
@@ -101,7 +105,7 @@ useEffect(() => {
 
       <div className="shopcategory-products">
         {filteredProducts.length === 0 ? (
-          <p className="shopcategory-empty">No products found for this type.</p>
+         <p className="shopcategory-empty">{loading ? "Loading products... the server may take up to a minute to wake up." : "No products found for this type."}</p>
         ) : (
           filteredProducts.map((item, i) => (
             <Item
