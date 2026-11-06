@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./CartItems.css";
 import cross_icon from "../Assets/cart_cross_icon.png";
 import { ShopContext } from "../../Context/ShopContext";
-import { backend_url, currency } from "../../App";
-
+import { currency } from "../../App";
+import { imgUrl } from "../../catalog";
 const CartItems = () => {
   const {products} = useContext(ShopContext);
  const {cartItems, addToCart, removeFromCart, deleteFromCart, getTotalCartAmount} = useContext(ShopContext);
@@ -29,7 +29,7 @@ const navigate = useNavigate();
   return (
     <div key={key}>
       <div className="cartitems-format-main cartitems-format">
-        <img className="cartitems-product-icon" src={backend_url + product.image} alt="" />
+        <img className="cartitems-product-icon"src={imgUrl(product.image)} alt="" />
         <div>
           <p>{product.name}</p>
           <p className="cartitems-size">Size: <span>{item.size}</span></p>

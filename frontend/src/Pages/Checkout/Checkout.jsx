@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import "./Checkout.css";
 import { ShopContext } from "../../Context/ShopContext";
 import { backend_url, currency } from "../../App";
+import { imgUrl } from "../../catalog";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { useNavigate } from "react-router-dom";
@@ -245,7 +246,7 @@ const applyPromo = async () => {
   if (!product) return null;
             return (
               <div key={i} className="checkout-summary-item">
-                <img src={backend_url + product.image} alt={product.name} />
+                <img src={imgUrl(product.image)} alt={product.name} />
                 <div className="checkout-summary-info">
                   <p>{product.name}</p>
                   <p>Size: {item.size} | Qty: {item.quantity}</p>

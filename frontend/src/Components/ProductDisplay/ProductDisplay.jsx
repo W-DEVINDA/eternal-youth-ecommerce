@@ -5,6 +5,7 @@ import star_dull_icon from "../Assets/star_dull_icon.png";
 import { ShopContext } from "../../Context/ShopContext";
 import { useEffect } from "react";
 import { backend_url, currency } from "../../App";
+import { imgUrl } from "../../catalog";
 
 const ProductDisplay = ({product}) => {
 
@@ -63,7 +64,7 @@ const [mainImage, setMainImage] = React.useState(allImages[0]);
           {allImages.map((img, index) => (
             <img
               key={index}
-              src={backend_url + img}
+              src={imgUrl(img)}
               alt={`thumb-${index}`}
              onClick={() => { setMainImage(img); setMainIndex(index); }}
               style={{ cursor: "pointer", border: mainImage === img ? "2px solid #ff4141" : "none", borderRadius: "4px" }}
@@ -77,7 +78,7 @@ const [mainImage, setMainImage] = React.useState(allImages[0]);
         >
           <img
             className="productdisplay-main-img"
-            src={backend_url + mainImage}
+            src={imgUrl(mainImage)}
             alt="img"
            style={zoomed ? {
               transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`,

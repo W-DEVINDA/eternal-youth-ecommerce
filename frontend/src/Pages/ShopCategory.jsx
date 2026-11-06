@@ -3,12 +3,11 @@ import "./CSS/ShopCategory.css";
 import dropdown_icon from '../Components/Assets/dropdown_icon.png'
 import Item from "../Components/Item/Item";
 import { Link } from "react-router-dom";
-import { backend_url } from "../App";
-import { fetchWithRetry } from "../fetchWithRetry";
+import { allProducts } from "../catalog";
 
 const ShopCategory = (props) => {
-    const [allproducts, setAllProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+      const allproducts = allProducts;
+  const loading = false;
   const [selectedType, setSelectedType] = useState("All");
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [bannerIndex, setBannerIndex] = useState(0);
@@ -28,13 +27,7 @@ useEffect(() => {
     return () => clearInterval(interval);
   }, [banners.length]);
 
-  useEffect(() => {
-       fetchWithRetry(`${backend_url}/allproducts`)
-      .then(res => res.json())
-            .then(data => { if (Array.isArray(data)) setAllProducts(data); })
-      .catch(() => {})
-      .finally(() => setLoading(false));
-  }, []);
+
 
   // Close dropdown when clicking outside
   useEffect(() => {

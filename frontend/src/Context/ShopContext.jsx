@@ -1,12 +1,12 @@
 import React, { createContext, useEffect, useState } from "react";
 import { backend_url } from "../App";
-import { fetchWithRetry } from "../fetchWithRetry";
+import { allProducts } from "../catalog";
 
 export const ShopContext = createContext(null);
 
 const ShopContextProvider = (props) => {
 
-  const [products, setProducts] = useState([]);
+  const [products] = useState(allProducts);
 
   const getDefaultCart = () => {
   return {};
@@ -15,10 +15,7 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
   useEffect(() => {
-       fetchWithRetry(`${backend_url}/allproducts`)
-      .then((res) => res.json())
-            .then((data) => { if (Array.isArray(data)) setProducts(data); })
-      .catch(() => {});
+     
 
     if (localStorage.getItem("auth-token")) {
       fetch(`${backend_url}/getcart`, {
